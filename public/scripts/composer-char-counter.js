@@ -5,7 +5,10 @@ $(document).ready(function() {
     const remChars = 140 - length;
 
     //this -> div class('tweet-text') -> form -> output('count')
-    $($(this)[0].parentElement.parentElement[2]).text(remChars);   
+    // $($(this)[0].parentElement.parentElement[2]).text(remChars); 
+
+    $(this).parent().next().find('output').text(remChars);
+    
     
 
     //CHANGE SO JS MANIPULATES CSS?
