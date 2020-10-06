@@ -8,6 +8,18 @@
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+/* On Hover */
+.show-username {
+  display: none;
+}
+.old-tweet:hover {
+  box-shadow: 5px 5px gray;
+}
+.old-tweet:hover > header > div > .show-username {
+  display: block;
+}
+
+
 /* Header */
 .old-tweet header {
   display: flex;
@@ -37,6 +49,7 @@
   display: flex;
   flex-basis: 100%;
   justify-content: space-between;
+  font-size: 16px;
 }
 .old-tweet > footer > div {
   display: flex;
