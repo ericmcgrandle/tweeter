@@ -1,0 +1,28 @@
+.old-tweet {
+  margin: 1em 0em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  border: 2px solid black;
+}
+
+/* Header */
+.user-info {
+  display: flex;
+  height: 70px;
+  flex-basis: 100%;
+  justify-content: space-between;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0.5em;
+}
+.user-info > div {
+  display: flex;
+  align-items: center;
+}
+img {
+  margin: 0.25em;
+  height: 50px;
+}
+
+
+
