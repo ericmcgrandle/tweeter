@@ -13,9 +13,9 @@ $(document).ready(function() {
 
     //CHANGE SO JS MANIPULATES CSS?
     if (remChars < 0) {
-      $('#count').css('color', '#ff0000');
+      $('#count').addClass('red');
     } else {
-      $('#count').css('color', '#000000');
+      $('#count').removeClass('red');
     }
   });
 });
