@@ -48,20 +48,7 @@
   color: red;
 }
 
-@media all and (min-width: 800px) {
 
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 150px 50px 0px 20px;
-  }
-  .new-tweet {    
-    flex-basis: 100%;
-  }
-  #tweets-container {
-    flex-basis: 100%;
-  }
-}
 
 
 

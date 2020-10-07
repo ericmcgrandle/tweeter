@@ -19,9 +19,3 @@ body {
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
 }
-
-@media all and (min-width: 800px) {
-  body {
-    flex-wrap: nowrap;
-  }
-}
