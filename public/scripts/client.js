@@ -31,11 +31,23 @@ $(document).ready(function() {
 
   //Loop array and append to tweet container
   const renderTweets = function (arr) {
+    //Show newest tweets first
+    // arr.reverse();
     arr.forEach((obj) => {
       const $tweet = createTweetElement(obj);
-      $('#tweets-container').append($tweet); 
+      $('#tweets-container').prepend($tweet); 
     });
   };
+
+  //shows tweet just posted
+  const refreshDB = function() {
+    $.get('/tweets', function(data, status) {
+      if (status !== 'success') {
+        console.log(status);
+      }
+      renderTweets([data[data.length-1]]);
+    });
+  }
 
   //Post method to tweets db
   $('#post-tweet').submit(function(event) {
@@ -51,6 +63,8 @@ $(document).ready(function() {
       $.post('/tweets', data, function(data, status) {
         if (status !== 'success'){
           console.log(status);
+        } else {
+          refreshDB();
         }
       });  
     }
@@ -65,7 +79,7 @@ $(document).ready(function() {
     });
   };
 
-  //Driver code
   loadTweets();
+
 
 });
