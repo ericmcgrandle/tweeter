@@ -1,3 +1,10 @@
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
+
 $(document).ready(function() {
 
   const createTweetElement = function (obj) {
@@ -5,15 +12,15 @@ $(document).ready(function() {
     <article class="old-tweet">
       <header>
         <div>
-          <img src="${obj.user.avatars}" alt="avatar">
+          <img src="${escape(obj.user.avatars)}" alt="avatar">
           <h6>${obj.user.name}</h6>
         </div>
         <div>
-          <h6 class="show-username">${obj.user.handle}</h6>
+          <h6 class="show-username">${escape(obj.user.handle)}</h6>
         </div>
       </header>
       <p>
-        ${obj.content.text}
+        ${escape(obj.content.text)}
       </p>
       <footer>
         <div>
@@ -52,14 +59,19 @@ $(document).ready(function() {
   //Post method to tweets db
   $('#post-tweet').submit(function(event) {
     event.preventDefault();
+    $('#error').hide(300);
     const data = $(this).serialize();
 
     //Validation
     if (data.length <= 5) {
-      alert("There's nothing to tweet!");
+      $('#error').text("There's nothing to tweet!");
+      $('#error').slideDown(800);
     } else if (data.length > 145) {
-      alert("Tweeter isn't for writing novels! Shorten your message");
+      $('#error').text("Tweeter isn't for writing novels! Shorten your message");
+      $('#error').slideDown(800);
     } else {
+      $('#tweet-text').val('');
+      $('#count').val(140);
       $.post('/tweets', data, function(data, status) {
         if (status !== 'success'){
           console.log(status);
@@ -70,6 +82,7 @@ $(document).ready(function() {
     }
   });
 
+  //Initial load
   const loadTweets = function() {
     $.get('/tweets', function(data, status) {
       if (status !== 'success') {
@@ -79,7 +92,6 @@ $(document).ready(function() {
     });
   };
 
+  //Driver code
   loadTweets();
-
-
 });

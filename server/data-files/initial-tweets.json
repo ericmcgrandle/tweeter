@@ -9,7 +9,7 @@
     "content": {
       "text": "If I have seen further it is by standing on the shoulders of giants"
     },
-    "created_at": 1461116232227
+    "created_at": 1461110000000
   },
   {
     "user": {
@@ -20,5 +20,27 @@
       "text": "Je pense , donc je suis"
     },
     "created_at": 1461113959088
+  },
+  {
+    "user": {
+      "name": "Me",
+      "avatars": "https://i.imgur.com/nlhLi3I.png",
+      "handle": "@me" },
+    "content": {
+      "text": "Test"
+    },
+    "created_at": 1602096712318
+  },
+  {
+    "user": {
+      "name": "testUser",
+      "avatars": "https://i.imgur.com/nlhLi3I.png",
+      "handle": "@test" },
+    "content": {
+      "text": "string"
+    },
+    "created_at": 1602096712320
   }
+
+
 ]

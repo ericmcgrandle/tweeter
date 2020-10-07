@@ -39,6 +39,8 @@
 
 /* Tweet */
 .old-tweet p {
+  /* If text extends width */
+  word-break: break-all;
   width: 100%;  
 }
 
