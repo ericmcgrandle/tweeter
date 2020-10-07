@@ -41,11 +41,31 @@ $(document).ready(function() {
   $('#post-tweet').submit(function(event) {
     event.preventDefault();
     const data = $(this).serialize();
-    $.post('/tweets', data, function(data, status) {
-      console.log('success');
-    });  
+
+    //Validation
+    if (data.length <= 5) {
+      alert("There's nothing to tweet!");
+    } else if (data.length > 145) {
+      alert("Tweeter isn't for writing novels! Shorten your message");
+    } else {
+      $.post('/tweets', data, function(data, status) {
+        if (status !== 'success'){
+          console.log(status);
+        }
+      });  
+    }
   });
 
+  const loadTweets = function() {
+    $.get('/tweets', function(data, status) {
+      if (status !== 'success') {
+        console.log(status);
+      }
+      renderTweets(data);
+    });
+  };
 
+  //Driver code
+  loadTweets();
 
 });
