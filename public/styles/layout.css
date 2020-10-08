@@ -19,3 +19,19 @@ body {
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
 }
+
+#return-to-top {
+  height: 100px;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  /* arrow-jump function in nav.css */
+  -webkit-animation: arrow-jump 5s infinite;
+}
+
+#return-to-top:hover {
+  background-color: lightgray;
+}
+
+

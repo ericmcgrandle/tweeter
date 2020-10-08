@@ -1,9 +1,9 @@
+//sanitize user input
 const escape =  function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 }
-
 
 $(document).ready(function() {
 
@@ -38,8 +38,6 @@ $(document).ready(function() {
 
   //Loop array and append to tweet container
   const renderTweets = function (arr) {
-    //Show newest tweets first
-    // arr.reverse();
     arr.forEach((obj) => {
       const $tweet = createTweetElement(obj);
       $('#tweets-container').prepend($tweet); 
@@ -92,9 +90,7 @@ $(document).ready(function() {
     });
   };
 
-  //Driver code
-  loadTweets();
-
+  //Hide / show compose tweet
   $('#write-tweet').click(function() {
     if ($('#compose-tweet').is(':visible')) {
       $('#compose-tweet').hide(800);
@@ -103,4 +99,11 @@ $(document).ready(function() {
       $('#tweet-text').focus();
     }    
   });
+
+  //button to top
+  
+
+  //Driver code
+  loadTweets();
+
 });
