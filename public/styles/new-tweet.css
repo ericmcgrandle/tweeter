@@ -8,8 +8,8 @@
 }
 
 .new-tweet {
+  display: none;
   flex-basis: 100%;
-  display: flex;
   flex-direction: column;
 }
 

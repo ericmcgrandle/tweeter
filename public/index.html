@@ -33,7 +33,7 @@
     <nav class="nav">
       <div>tweeter</div>
       <div class="tweet-button">
-        <p><button>Write</button> a new Tweet!</p>
+        <p id="write-tweet">Write a new Tweet!</p>
         <p id="arrow">v</p>        
       </div>
     </nav>
@@ -52,8 +52,7 @@
     <main class="container">
 
       <!-- Posting a tweet -->
-      <section class="new-tweet">
-        <!-- <h2 class="handle-error">Compose Tweet</h2> -->
+      <section class="new-tweet" id="compose-tweet">
         <span id="error" class="error"></span>
         <form method="POST" action="/tweets/" id="post-tweet">
           <div class="tweet-text">

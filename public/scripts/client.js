@@ -94,4 +94,12 @@ $(document).ready(function() {
 
   //Driver code
   loadTweets();
+
+  $('#write-tweet').click(function() {
+    if ($('#compose-tweet').is(':visible')) {
+      $('#compose-tweet').hide(800);
+    } else {
+      $('#compose-tweet').slideDown(800);
+    }    
+  });
 });
