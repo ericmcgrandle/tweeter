@@ -100,6 +100,7 @@ $(document).ready(function() {
       $('#compose-tweet').hide(800);
     } else {
       $('#compose-tweet').slideDown(800);
+      $('#tweet-text').focus();
     }    
   });
 });

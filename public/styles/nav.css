@@ -17,6 +17,10 @@
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+#write-tweet:hover {
+  font-size: 26px;
+}
+
 /* Arrow animation */
 p {
   padding: 0;
