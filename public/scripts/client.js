@@ -12,15 +12,15 @@ $(document).ready(function() {
     <article class="old-tweet">
       <header>
         <div>
-          <img src="${escape(obj.user.avatars)}" alt="avatar">
+          <img src="${obj.user.avatars}" alt="avatar">
           <h6>${obj.user.name}</h6>
         </div>
         <div>
-          <h6 class="show-username">${escape(obj.user.handle)}</h6>
+          <h6 class="show-username">${obj.user.handle}</h6>
         </div>
       </header>
       <p>
-        ${escape(obj.content.text)}
+        ${obj.content.text}
       </p>
       <footer>
         <div>
@@ -58,13 +58,14 @@ $(document).ready(function() {
   $('#post-tweet').submit(function(event) {
     event.preventDefault();
     $('#error').hide(300);
+    const length = $("#tweet-text").val().length;
     const data = $(this).serialize();
 
     //Validation
-    if (data.length <= 5) {
+    if (length <= 0) {
       $('#error').text("There's nothing to tweet!");
       $('#error').slideDown(800);
-    } else if (data.length > 145) {
+    } else if (length > 140) {
       $('#error').text("Tweeter isn't for writing novels! Shorten your message");
       $('#error').slideDown(800);
     } else {

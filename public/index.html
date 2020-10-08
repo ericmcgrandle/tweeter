@@ -39,6 +39,7 @@
       </div>
     </nav>
 
+    <!-- User Profile -->
     <header class="profile-header">
       <div class="profile-avatar">
         <img src="/images/profile-hex.png" alt="avatar">
@@ -48,11 +49,10 @@
       </div>
     </header>
 
-    <!-- Page-specific (main) content here -->
-
+    <!-- Tweet container -->
     <main class="container">
 
-      <!-- Posting a tweet -->
+      <!-- Posting a new tweet -->
       <section class="new-tweet" id="compose-tweet">
         <span id="error" class="error"></span>
         <form method="POST" action="/tweets/" id="post-tweet">
@@ -71,9 +71,8 @@
       <section id='tweets-container'>
       </section>
 
-
+      <!-- Scroll button -->
       <button class="to-top-show" id="return-to-top">^</button>
-
     </main>
   </body>
 </html>

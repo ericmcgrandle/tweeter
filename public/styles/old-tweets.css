@@ -40,7 +40,9 @@
 /* Tweet */
 .old-tweet p {
   /* If text extends width */
-  word-break: break-all;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
   width: 100%;  
 }
 
