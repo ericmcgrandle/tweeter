@@ -95,13 +95,38 @@ $(document).ready(function() {
     if ($('#compose-tweet').is(':visible')) {
       $('#compose-tweet').hide(800);
     } else {
-      $('#compose-tweet').slideDown(800);
+      $('#compose-tweet').slideDown(400);
       $('#tweet-text').focus();
     }    
   });
 
+  //Logic for button to top (depends on mobile / desktop views)
+  const scrollTop = function(min) {
+    if (document.documentElement.scrollTop > min) {
+      $('#return-to-top').removeClass('to-top-show');
+      $('.nav').addClass('nav-hide');
+      $('#compose-tweet').hide(800);
+    } else {
+      $('#return-to-top').addClass('to-top-show');
+      $('.nav').removeClass('nav-hide');   
+    }
+  }
+
   //button to top
-  
+  $(window).scroll(function() {
+    if (window.innerWidth > 800) {
+      scrollTop(50);
+    } else {
+      scrollTop(420);
+    }
+  });
+
+  $('#return-to-top').click(function() {
+    document.documentElement.scrollTop = 0;
+    $('#compose-tweet').slideDown(1);
+    $('#tweet-text').focus();
+  });
+
 
   //Driver code
   loadTweets();

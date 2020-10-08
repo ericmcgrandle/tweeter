@@ -13,6 +13,10 @@
   top: 0;
 }
 
+.nav-hide {
+  display: none;
+}
+
 .tweet-button {
   font-family: 'Source Sans Pro', sans-serif;
 }
