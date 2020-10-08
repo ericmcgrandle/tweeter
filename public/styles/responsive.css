@@ -23,3 +23,20 @@
     flex-basis: 100%;
   }
 }
+
+@media screen and (max-width: 500px) {
+
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .nav > div {
+    text-align: center;
+    flex-basis: 100%;
+    margin: -10px 0px 10px;
+  }
+  .nav-hide {
+    display: none;
+  }
+
+}

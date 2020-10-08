@@ -12,15 +12,15 @@ $(document).ready(function() {
     <article class="old-tweet">
       <header>
         <div>
-          <img src="${obj.user.avatars}" alt="avatar">
+          <img src="${escape(obj.user.avatars)}" alt="avatar">
           <h6>${obj.user.name}</h6>
         </div>
         <div>
-          <h6 class="show-username">${obj.user.handle}</h6>
+          <h6 class="show-username">${escape(obj.user.handle)}</h6>
         </div>
       </header>
       <p>
-        ${obj.content.text}
+        ${escape(obj.content.text)}
       </p>
       <footer>
         <div>
@@ -61,7 +61,7 @@ $(document).ready(function() {
     const length = $("#tweet-text").val().length;
     const data = $(this).serialize();
 
-    //Validation
+    //Length Validation
     if (length <= 0) {
       $('#error').text("There's nothing to tweet!");
       $('#error').slideDown(800);
@@ -122,6 +122,7 @@ $(document).ready(function() {
     }
   });
 
+  //On button click
   $('#return-to-top').click(function() {
     document.documentElement.scrollTop = 0;
     $('#compose-tweet').slideDown(1);
@@ -129,7 +130,7 @@ $(document).ready(function() {
   });
 
 
-  //Driver code
+  //Driver code for example tweets db
   loadTweets();
 
 });
