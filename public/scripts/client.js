@@ -27,9 +27,9 @@ $(document).ready(function() {
           10 days ago
         </div>
         <ul>
-          <li>share</li>
-          <li>flag</li>
-          <li>like</li>
+        <li><img src="../images/retweet-icon.svg" alt="retweet"></li>
+          <li><img src="../images/flag-icon.svg" alt="flag"></li>
+          <li><img src="../images/like-icon.svg" alt="like"></li>
         </ul>
       </footer>
     </article>`

@@ -62,10 +62,15 @@
 }
 .old-tweet > footer > ul > li {
   display: flex;
-  align-items: center;
-  margin: 0px 10px;
+  justify-content: space-evenly;
   float: left;
 }
+
+.old-tweet > footer > ul > li > img {
+  max-width: 20px;
+  max-width: 20px;
+  margin: 0px 10px;
+} 
 
 
 
