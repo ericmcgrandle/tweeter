@@ -15,3 +15,11 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Final Product
+
+!["Screenshot of Urls Page"](https://github.com/ericmcgrandle/tweeter/blob/master/docs/desktop-view.png?raw=true)
+!["Screenshot of Urls Page"](https://github.com/ericmcgrandle/tweeter/blob/master/docs/Tweets.png?raw=true)
+!["Screenshot of Urls Page"](https://github.com/ericmcgrandle/tweeter/blob/master/docs/mobile-view.png?raw=true)
+
+
