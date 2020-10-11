@@ -44,6 +44,8 @@
 }
 
 #tweet-text {
+  height: 30px;
+  max-height: 70px;
   flex-basis: 45%;
   resize: none;
 }

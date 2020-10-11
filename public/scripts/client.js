@@ -135,6 +135,11 @@ $(document).ready(function() {
     $('#tweet-text').focus();
   });
 
+  //Adjusts height of textarea (max 70px)
+  $('textarea').on('input', function () {
+    this.style.height = (this.scrollHeight) + 'px';
+  });
+
 
   //Driver code for example tweets db
   loadTweets();
