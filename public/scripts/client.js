@@ -5,6 +5,12 @@ const escape =  function(str) {
   return div.innerHTML;
 }
 
+const getDate = function(timestamp) {
+  const time = new Date(timestamp);
+  const date = time.toLocaleString();
+  return date;
+};
+
 $(document).ready(function() {
 
   const createTweetElement = function (obj) {
@@ -24,7 +30,7 @@ $(document).ready(function() {
       </p>
       <footer>
         <div>
-          10 days ago
+          ${getDate(obj.created_at)}
         </div>
         <ul>
         <li><img src="../images/retweet-icon.svg" alt="retweet"></li>
