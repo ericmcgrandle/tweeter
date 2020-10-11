@@ -38,6 +38,16 @@
   color: red;
 }
 
+.tweet-text > label{
+  flex-basis: 30%;
+  text-align: center;
+}
+
+#tweet-text {
+  flex-basis: 45%;
+  resize: none;
+}
+
 .error {
   display: none;
   text-align: center;
